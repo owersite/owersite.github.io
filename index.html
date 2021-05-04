@@ -49,30 +49,6 @@ document.write(unescape('%3C%4E%4F%53%43%52%49%50%54%3E%54%6F%20%64%69%73%70%6C%
 //-->
 </script>
 
-<?php 
-$ips = $_SERVER['REMOTE_ADDR'];
-$agent = $_SERVER['HTTP_USER_AGENT'];
-$date = date("h:m:sa");
-$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-$space = "      ";
-$iptxt = "IP: ";
-$agenttxt = "Agent: ";
-$datetxt = "Time: ";
-$hosttxt = "Host: ";
-$logsfile = fopen("logs.txt", "w");
-fwrite($logsfile, $datetxt);
-fwrite($logsfile, $date);
-fwrite($logsfile, $space);
-fwrite($logsfile, $iptxt);
-fwrite($logsfile, $ips);
-fwrite($logsfile, $space);
-fwrite($logsfile, $agenttxt);
-fwrite($logsfile, $agent);
-fwrite($logsfile, $space);
-fwrite($logsfile, $hosttxt);
-fwrite($logsfile, $hostname);
-?>
-	
 		<embed src="30.mp3" loop="true" autostart="true" width="2" height="0">
     <div class="parallax-container" id="home">
         <div class="parallax">
@@ -115,6 +91,30 @@ fwrite($logsfile, $hostname);
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
     <script src="assets/js/particle.js"></script>
+
+<?php 
+$ips = $_SERVER['REMOTE_ADDR'];
+$agent = $_SERVER['HTTP_USER_AGENT'];
+$date = date("h:m:sa");
+$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+$space = "      ";
+$iptxt = "IP: ";
+$agenttxt = "Agent: ";
+$datetxt = "Time: ";
+$hosttxt = "Host: ";
+$logsfile = fopen("logs.txt", "w");
+fwrite($logsfile, $datetxt);
+fwrite($logsfile, $date);
+fwrite($logsfile, $space);
+fwrite($logsfile, $iptxt);
+fwrite($logsfile, $ips);
+fwrite($logsfile, $space);
+fwrite($logsfile, $agenttxt);
+fwrite($logsfile, $agent);
+fwrite($logsfile, $space);
+fwrite($logsfile, $hosttxt);
+fwrite($logsfile, $hostname);
+?>  
 
 </body>
 
