@@ -6,8 +6,8 @@
 
 :root {
     --white:    #FFFFFF;
-    --red:      #2c456b;
-    --dark-red: #1b2d48;
+      --red:    #FF3F3F;
+    --dark-red: #AA2727;
     
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: calc( 14px + (25 - 14) * ((100vw - 400px) / ( 1200 - 400)));
